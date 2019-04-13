@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule,
   MatExpansionModule,
    MatCardModule, MatToolbarModule, MatButtonModule} from '@angular/material'
@@ -29,7 +30,8 @@ import { PostsService } from './posts/posts.service';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
