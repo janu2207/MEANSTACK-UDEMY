@@ -6,7 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule,
   MatExpansionModule,
-   MatCardModule, MatToolbarModule, MatButtonModule} from '@angular/material'
+   MatCardModule, MatToolbarModule, MatButtonModule, MatProgressSpinnerModule} from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {   PostCreateComponent } from './posts/post-create/post-create.component';
@@ -31,6 +31,7 @@ import { PostsService } from './posts/posts.service';
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
   providers: [PostsService],

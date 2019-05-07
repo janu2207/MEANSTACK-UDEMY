@@ -1,5 +1,6 @@
 <mat-card>
-  <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form *ngIf="!isLoading" (submit)="onSavePost(postForm)" #postForm="ngForm">
       <mat-form-field>
           <input placeholder="Post Title" type="text" name="title" matInput
            [ngModel]="post?.title"
@@ -21,6 +22,8 @@
       [disabled]="!postForm.valid"
        type="submit">Save Post</button>
   </form>
+
+
 
 
 </mat-card>
