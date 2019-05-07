@@ -2,7 +2,7 @@
   <form (submit)="onSavePost(postForm)" #postForm="ngForm">
       <mat-form-field>
           <input placeholder="Post Title" type="text" name="title" matInput
-           [ngModel]="post.title"
+           [ngModel]="post?.title"
            required minlength="3" #title="ngModel">
           <mat-error *ngIf="title.invalid">
             Please enter post title
@@ -10,7 +10,7 @@
         </mat-form-field>
       <mat-form-field>
         <textarea placeholder="Post Content" matInput name="content" rows="6"
-       [ngModel] ="post.content"
+       [ngModel] ="post?.content"
          required #content="ngModel" ></textarea>
         <mat-error *ngIf="content.invalid">
           Please enter content

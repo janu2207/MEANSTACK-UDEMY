@@ -36,6 +36,18 @@ post.save().then(result=>{
 
 })
 
+app.get("/api/posts/:id",(req,res,next)=>{
+  Post.findById(req.params.id).then((post)=>{
+    if(post){
+      res.status(200).json(post);
+
+    }
+    else{
+      res.status(404).json({message:'post not found'});
+    }
+  })
+})
+
 app.put("/api/posts/:id",(req,res,next)=>{
   const post = new Post({
     _id: req.body.id,
@@ -68,6 +80,8 @@ app.delete("/api/posts/:id",(req,res,next)=>{
 
   })
 });
+
+
 
 
 
