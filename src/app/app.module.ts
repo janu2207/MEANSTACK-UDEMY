@@ -6,7 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule,
   MatExpansionModule,
-   MatCardModule, MatToolbarModule, MatButtonModule, MatProgressSpinnerModule} from '@angular/material'
+   MatCardModule, MatToolbarModule, MatButtonModule, MatProgressSpinnerModule, MatPaginatorModule} from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {   PostCreateComponent } from './posts/post-create/post-create.component';
@@ -33,7 +33,8 @@ import {ReactiveFormsModule} from '@angular/forms'
     MatToolbarModule,
     MatExpansionModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
