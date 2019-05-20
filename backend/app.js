@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 const postRoutes = require('./routes/posts');
-mongoose.connect ("mongodb+srv://janu2207:Jalend12@cluster0-sgdxc.mongodb.net/test?retryWrites=true").then(()=>{
+const userRoutes = require('./routes/user')
+mongoose.connect ("mongodb+srv://janu2207:Jalend12@cluster0-sgdxc.mongodb.net/test").then(()=>{
   console.log("Connected to db");
 }).catch((error)=>{
   console.log("Connection failed");
@@ -22,8 +23,10 @@ app.use("/",(req,res,next)=>{
 
 
 
+
 app.use("/api/posts",postRoutes);
 
+app.use("/api/user",userRoutes);
 
 
 module.exports = app;
